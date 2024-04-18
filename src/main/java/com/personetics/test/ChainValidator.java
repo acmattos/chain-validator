@@ -21,7 +21,7 @@ public class ChainValidator {
                 multiple = node;
             }
         }
-        return validateChain(multiple, singleMap);
+        return validateChain(multiple, singleMap); // TC - O(p*q)
     }
 
     private <T> boolean validateChain(Node<T> multiple,
