@@ -21,6 +21,11 @@ public class ChainValidator {
                 multiple = node;
             }
         }
+        return validateChain(multiple, singleMap);
+    }
+
+    private <T> boolean validateChain(Node<T> multiple,
+        Map<Character, Boolean> singleMap) {
         // TC - O(p*q) - Validating multiple nodes based on single ones
         while (multiple != null) { // TC - O(p)
             for (char c: multiple.valueToCharArray()) {//TC - O(q)
